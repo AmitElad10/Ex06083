@@ -7,13 +7,77 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/plusbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="188dp"
+        android:text="+"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/minusbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="188dp"
+        android:layout_marginEnd="92dp"
+        android:text="-"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/mulbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="32dp"
+        android:text="*"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/plusbtn" />
+
+    <Button
+        android:id="@+id/divbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="92dp"
+        android:text="/"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/minusbtn" />
+
+    <Button
+        android:id="@+id/acbtn"
+        android:layout_width="148dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="324dp"
+        android:text="A/C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/equalbtn"
+        android:layout_width="142dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="324dp"
+        android:text="="
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.78"
+        app:layout_constraintStart_toEndOf="@+id/acbtn" />
+
+    <EditText
+        android:id="@+id/eTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
