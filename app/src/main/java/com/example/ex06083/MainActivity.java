@@ -111,11 +111,11 @@ public class MainActivity extends AppCompatActivity {
     public void cal(){ //here im checking th previous action.
         if(op == 1){
             fnum = fnum + num;}
-        if(op == 2){
+        else if(op == 2){
             fnum = fnum - num;}
-        if(op == 3){
+        else if(op == 3){
             fnum = fnum * num;}
-        if(op == 4){
+        else if(op == 4){
             fnum = fnum / num;}
     }
 }
