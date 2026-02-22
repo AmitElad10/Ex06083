@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="92dp"
         android:layout_marginTop="188dp"
+        android:onClick="plus"
         android:text="+"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -51,23 +52,27 @@
         android:id="@+id/acbtn"
         android:layout_width="148dp"
         android:layout_height="49dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="324dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="300dp"
+        android:onClick="clean"
         android:text="A/C"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mulbtn" />
 
     <Button
         android:id="@+id/equalbtn"
         android:layout_width="142dp"
         android:layout_height="50dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="324dp"
+        android:layout_marginBottom="296dp"
+        android:onClick="equal"
         android:text="="
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.78"
-        app:layout_constraintStart_toEndOf="@+id/acbtn" />
+        app:layout_constraintHorizontal_bias="0.784"
+        app:layout_constraintStart_toEndOf="@+id/acbtn"
+        app:layout_constraintTop_toBottomOf="@+id/divbtn" />
 
     <EditText
         android:id="@+id/eTV"
