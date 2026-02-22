@@ -13,10 +13,11 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
     EditText eTV;
-    int fnum = 0;
-    int op = 0;
-    int num;
+    double fnum = 0;
+    double op = 0;
+    double num;
     boolean flag = true;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,46 +28,94 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void plus(View view) {
+        cal();
         op = 1;
         String n = eTV.getText().toString();
-        num = Integer.parseInt(n);
+        num = Double.parseDouble(n);
         eTV.setText("");
+        if(flag){
+            fnum = num;;
+            flag = !flag;
+        }
         fnum += num;
+
 
     }
 
     public void equal(View view) {
         String n = eTV.getText().toString();
-        num = Integer.parseInt(n);
+        num = Double.parseDouble(n);
         if (op == 1) {
             fnum += num;
         } else if (op == 2) {
             fnum = fnum - num;
+        } else if (op == 3) {
+            fnum = fnum * num;
         }
-        String x = Integer.toString(fnum);
+        else{
+            fnum = fnum / num;
+        }
+        String x = Double.toString(fnum);
         eTV.setText(x);
 
     }
 
     public void clean(View view) {
         fnum = 0;
+        flag = true;
         eTV.setText("");
     }
 
     public void sub(View view) {
+        cal();
         op = 2;
         String n = eTV.getText().toString();
-        num = Integer.parseInt(n);
+        num = Double.parseDouble(n);
         eTV.setText("");
-        if(flag == true){
-            fnum = num;
+        if(flag){
+            fnum += num;
             flag = false ;
         }
         else{
             fnum = fnum - num;
         }
-
-
-
+    }
+    public void mul(View view) {
+        cal();
+        op = 3;
+        String n = eTV.getText().toString();
+        num = Double.parseDouble(n);
+        eTV.setText("");
+        if(flag){
+            fnum = num;
+            flag = false ;
+        }
+        else{
+            fnum = fnum * num;
+        }
+    }
+    public void div(View view) {
+        cal();
+        op = 4;
+        String n = eTV.getText().toString();
+        num = Double.parseDouble(n);
+        eTV.setText("");
+        if(flag){
+            fnum = num;
+            flag = false ;
+        }
+        else{
+            fnum = fnum / num;
+        }
+    }
+    public void cal(){ //here im checking th previous action.
+        if(op == 1){
+            fnum = fnum + num;}
+        if(op == 2){
+            fnum = fnum - num;}
+        if(op == 3){
+            fnum = fnum * num;}
+        if(op == 4){
+            fnum = fnum / num;}
     }
 }
