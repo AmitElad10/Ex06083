@@ -28,8 +28,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void plus(View view) {
-        cal();
-        op = 1;
         String n = eTV.getText().toString();
         num = Double.parseDouble(n);
         eTV.setText("");
@@ -37,7 +35,11 @@ public class MainActivity extends AppCompatActivity {
             fnum = num;;
             flag = !flag;
         }
-        fnum += num;
+        else{
+            cal();
+        }
+        op = 1;
+
 
 
     }
@@ -67,8 +69,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sub(View view) {
-        cal();
-        op = 2;
         String n = eTV.getText().toString();
         num = Double.parseDouble(n);
         eTV.setText("");
@@ -77,12 +77,13 @@ public class MainActivity extends AppCompatActivity {
             flag = false ;
         }
         else{
-            fnum = fnum - num;
+            cal();
         }
+        op = 2;
+
     }
     public void mul(View view) {
-        cal();
-        op = 3;
+
         String n = eTV.getText().toString();
         num = Double.parseDouble(n);
         eTV.setText("");
@@ -91,12 +92,13 @@ public class MainActivity extends AppCompatActivity {
             flag = false ;
         }
         else{
-            fnum = fnum * num;
+            cal();
         }
+        op = 3;
+
     }
     public void div(View view) {
-        cal();
-        op = 4;
+
         String n = eTV.getText().toString();
         num = Double.parseDouble(n);
         eTV.setText("");
@@ -105,8 +107,9 @@ public class MainActivity extends AppCompatActivity {
             flag = false ;
         }
         else{
-            fnum = fnum / num;
+            cal();
         }
+        op = 4;
     }
     public void cal(){ //here im checking th previous action.
         if(op == 1){
